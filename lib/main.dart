@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key key}) : super(key: key);
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +31,7 @@ const List _photos = [
   'assets/9.png',
 ];
 class RotationScene extends StatefulWidget {
-  const RotationScene({Key key}) : super(key: key);
+  const RotationScene({Key? key}) : super(key: key);
 
   @override
   _RotationSceneState createState() => _RotationSceneState();
@@ -47,8 +47,8 @@ class _RotationSceneState extends State<RotationScene> {
 }
 
 class CardData {
-  Color color;
-  double x, y, z, angle;
+  late Color color;
+  double? x, y, z, angle;
   final int idx;
   double alpha = 0;
 
@@ -66,7 +66,7 @@ class CardData {
 }
 
 class MyScener extends StatefulWidget {
-  const MyScener({Key key}) : super(key: key);
+  const MyScener({Key? key}) : super(key: key);
 
   @override
   _MyScenerState createState() => _MyScenerState();
@@ -74,12 +74,12 @@ class MyScener extends StatefulWidget {
 
 class _MyScenerState extends State<MyScener>
     with SingleTickerProviderStateMixin {
-  AnimationController _animationController;
+  late AnimationController _animationController;
 
   List<CardData> cardData = [];
   int numItems = 9;
   double radio = 200.0;
-  double radioStep;
+  late double radioStep;
   int centerIdx = 1;
 
   @override
@@ -121,14 +121,14 @@ class _MyScenerState extends State<MyScener>
 
 
     // sort in Z axis.
-    cardData.sort((a, b) => a.z.compareTo(b.z));
+    cardData.sort((a, b) => a.z!.compareTo(b.z!));
 
     var list = cardData.map((vo) {
       var c = addCard(vo);
       var mt2 = Matrix4.identity();
       mt2.setEntry(3, 2, 0.001);
-      mt2.translate(vo.x, vo.y, -vo.z);
-      mt2.rotateY(vo.angle + pi);
+      mt2.translate(vo.x, vo.y!, -vo.z!);
+      mt2.rotateY(vo.angle! + pi);
       c = Transform(
         alignment: Alignment.center,
         origin: const Offset(0.0, -0.0),
@@ -150,7 +150,7 @@ class _MyScenerState extends State<MyScener>
   }
 
   Widget addCard(CardData vo) {
-    var alpha = ((1 - vo.z / radio) / 2) * .6;
+    var alpha = ((1 - vo.z! / radio) / 2) * .6;
     Widget c;
     c = Container(
       margin: const EdgeInsets.all(12),
