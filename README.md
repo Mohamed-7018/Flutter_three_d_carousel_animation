@@ -9,9 +9,19 @@
 * Auto play
 
 
-## Live preview
+## Supported platforms
 
+* Flutter Android
+* Flutter iOS
+* Flutter web
+* Flutter desktop
+
+## Live preview - Mobile
 https://user-images.githubusercontent.com/80456446/173357713-af325ed9-88a4-4ec4-9bdb-b1262507b4c4.mp4
+
+## Live preview - Desktop
+https://user-images.githubusercontent.com/80456446/173364394-69168dcc-7c2f-4296-b4a7-079285d0a4d5.mp4
+
 
 <h1 align="center">
   <img src="https://user-images.githubusercontent.com/80456446/140647786-f3cc8d5e-2dc2-4ad0-8200-d36f39061763.gif" width="50" height="30"  />  Just follow☝️ me and Star⭐ my repository<img src="https://user-images.githubusercontent.com/80456446/140647786-f3cc8d5e-2dc2-4ad0-8200-d36f39061763.gif" width="50" height="30"  />
@@ -45,4 +55,7 @@ Pull requests are welcome. For major changes, please open an issue first to disc
   </h1>
 
 ![74797-thank-you-with-confetti](https://user-images.githubusercontent.com/80456446/140656223-3b3f6572-6551-49d7-ae96-8b9e1e940791.gif)
+
+
+
 
